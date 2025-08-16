@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mahesh Mokashe · Software Developer</title>
+  <meta name="description" content="Portfolio of Mahesh Mokashe — Software Developer specializing in Python, Scrapy, Django, and React.js." />
+  <meta name="author" content="Mahesh Mokashe" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root{
+      --bg:#ffffff;--text:#111827;--muted:#6b7280;--navy:#0A192F;--accent:#64FFDA;--card:#f8fafc;--border:#e5e7eb;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+    a{color:var(--navy);text-decoration:none}
+    a:hover{opacity:.9}
+    .container{width:min(1100px, 92%);margin-inline:auto}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:.7rem;font-weight:800;color:var(--navy)}
+    .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--accent)}
+    nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0;font-weight:600}
+    nav a{padding:8px 10px;border-radius:8px}
+    nav a:hover{background:var(--card)}
+    .hero{background:var(--navy);color:#fff;padding:72px 0 56px}
+    .hero .title{font-size:clamp(28px,4vw,42px);line-height:1.15;margin:0 0 10px}
+    .hero .subtitle{color:#cbd5e1;margin:0 0 18px}
+    .hero .meta{display:flex;flex-wrap:wrap;gap:.8rem;color:#e5e7eb}
+    .hero .meta a{color:#e5e7eb}
+    .cta{display:flex;gap:12px;margin-top:22px}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:10px 14px;border-radius:10px;font-weight:600;border:2px solid transparent}
+    .btn.primary{background:var(--accent);color:#0b2a2a}
+    .btn.ghost{border-color:#94a3b8;color:#fff}
+    section{padding:56px 0}
+    h2.section-title{font-size:clamp(22px,3vw,28px);margin:0 0 18px;color:var(--navy)}
+    p.section-lead{margin-top:0;color:var(--muted)}
+    .about{display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
+    .about .card{background:var(--card);padding:18px;border:1px solid var(--border);border-radius:14px}
+    @media (max-width: 860px){.about{grid-template-columns:1fr}}
+    .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .skill-row{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px}
+    .skill-row b{color:var(--navy)}
+    @media (max-width:700px){.skills{grid-template-columns:1fr}}
+    .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .badge{padding:6px 10px;border:1px solid var(--border);background:#fff;border-radius:999px;font-size:13px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:620px){.grid{grid-template-columns:1fr}}
+    .card{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+    .card .body{padding:16px}
+    .card h3{margin:0 0 6px;font-size:18px}
+    .card p{margin:0 0 10px;color:var(--muted)}
+    .card .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+    .tag{background:var(--card);border:1px dashed var(--border);border-radius:999px;padding:4px 10px;font-size:12px}
+    .timeline{border-left:2px solid var(--border);padding-left:16px}
+    .tl-item{margin:0 0 16px}
+    .tl-item h4{margin:0;color:var(--navy)}
+    .tl-item .small{color:var(--muted);font-size:14px}
+    footer{padding:28px 0;border-top:1px solid var(--border);color:var(--muted)}
+    .contact-links{display:flex;flex-wrap:wrap;gap:10px}
+    .contact-links a{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--border);border-radius:10px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><span class="dot"></span> Mahesh Mokashe</div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#certs">Certifications</a></li>
+          <li><a href="#interests">Interests</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1 class="title">Software Developer • Python · Scrapy · Django · React.js</h1>
+      <p class="subtitle">I build scalable web scrapers, automate data pipelines, and ship clean datasets for e‑commerce & fashion domains.</p>
+      <div class="meta">
+        <span><i class="fa-solid fa-location-dot"></i> Pune, India</span>
+        <span>·</span>
+        <a href="mailto:maheshmokashe542@gmail.com"><i class="fa-solid fa-envelope"></i> maheshmokashe542@gmail.com</a>
+        <span>·</span>
+        <a href="tel:+919075575237"><i class="fa-solid fa-phone"></i> +91 9075575237</a>
+        <span>·</span>
+        <a href="https://linkedin.com/in/mahesh-mokashe1997" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+      </div>
+      <div class="cta">
+        <a class="btn primary" href="#projects"><i class="fa-solid fa-folder-open"></i> View Projects</a>
+        <a class="btn ghost" href="./Mahesh_Mokashe_Resume.pdf" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container about">
+      <div class="card">
+        <h2 class="section-title">About</h2>
+        <p class="section-lead">Software Developer with <b>3+ years</b> of experience specializing in Python, Scrapy, and Django. Proficient with Linux server handling (Putty), and web technologies including React.js. Strong problem‑solving skills and a collaborative, team‑oriented mindset.</p>
+      </div>
+      <div class="card">
+        <h2 class="section-title">Quick Facts</h2>
+        <ul>
+          <li>Built and maintained <b>500+ custom crawlers</b> for e‑commerce & fashion platforms.</li>
+          <li>Improved extraction efficiency by <b>30%</b> via pipeline optimizations.</li>
+          <li>Automated validation & cleansing to reduce manual errors by <b>40%</b>.</li>
+          <li>Django backends + React.js UIs for internal data tools.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Core Skills</h2>
+      <div class="skills">
+        <div class="skill-row"><b>Programming:</b> Python, Django, Pandas, NumPy</div>
+        <div class="skill-row"><b>Web Scraping:</b> Scrapy, XPath, CSS Selectors, Regex, JSON</div>
+        <div class="skill-row"><b>Web Technologies:</b> HTML, CSS, React.js, JavaScript (basic)</div>
+        <div class="skill-row"><b>Databases:</b> MySQL</div>
+        <div class="skill-row"><b>Tools & Platforms:</b> Linux, Putty, Jira, PyCharm, SVN, WinSCP</div>
+        <div class="skill-row"><b>Professional Skills:</b> Team Leadership, Collaboration, Problem‑Solving, Automation, Data Mapping</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="grid">
+        <article class="card"><div class="body"><h3>E‑commerce Price Tracker</h3><p>Scrapy spider suite tracking prices/stock across multiple retailers; exports normalized JSON/CSV feeds.</p></div></article>
+        <article class="card"><div class="body"><h3>Product Catalog API</h3><p>Django REST API that aggregates crawler outputs and serves queryable product data to internal dashboards.</p></div></article>
+        <article class="card"><div class="body"><h3>Scraper Ops Dashboard</h3><p>React.js UI to monitor crawler status, schedules, and logs; integrates with Linux servers via APIs.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <h4>Software Developer · KrawlNet Technologies Pvt Ltd</h4>
+          <div class="small">Pune · Jul 2022 – Present</div>
+          <ul>
+            <li>Developed and deployed <b>500+ custom crawlers</b> for e‑commerce & fashion platforms.</li>
+            <li>Automated feed validation & data cleansing (−40% manual errors) and boosted extraction efficiency (~30%).</li>
+            <li>Built Django backends and React.js interfaces for internal data tools.</li>
+            <li>Managed deployments and monitoring on Linux servers using Putty and logging pipelines.</li>
+            <li>Processed data in XML and JSON formats; implemented robust retry/error‑handling.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certs">
+    <div class="container">
+      <h2 class="section-title">Certifications</h2>
+      <ul>
+        <li>Python for Everybody – Coursera</li>
+        <li>Django for Web Development – Udemy</li>
+        <li>React.js Fundamentals – Codecademy</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="interests">
+    <div class="container">
+      <h2 class="section-title">Interests</h2>
+      <p>Learning New Technologies | Automation | Open Source | Tech Communities</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-lead">I’m open to freelance, full‑time roles, and interesting collaborations. The fastest way to reach me is email.</p>
+      <div class="contact-links">
+        <a href="mailto:maheshmokashe542@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+        <a href="https://linkedin.com/in/mahesh-mokashe1997" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a href="tel:+919075575237"><i class="fa-solid fa-phone"></i> Call</a>
+      </div>
+    </div>
+  </section>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click', e=>{const id=a.getAttribute('href');const el=document.querySelector(id);if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }})})
+  </script>
+</body>
+</html>
