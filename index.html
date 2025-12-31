@@ -3,78 +3,185 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mahesh Mokashe · Software Developer</title>
-  <meta name="description" content="Portfolio of Mahesh Mokashe — Software Developer specializing in Python, Scrapy, Django, and React.js." />
+  <title>Mahesh Mokashe | Python Full Stack Engineer</title>
+  <meta name="description" content="Portfolio of Mahesh Mokashe — Software Engineer specializing in Python, Django, FastAPI, and React.js." />
   <meta name="author" content="Mahesh Mokashe" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    :root{
-      --bg:#ffffff;--text:#111827;--muted:#6b7280;--navy:#0A192F;--accent:#64FFDA;--card:#f8fafc;--border:#e5e7eb;
+    :root {
+      --bg: #0f172a; /* Darker, modern background */
+      --text-main: #e2e8f0;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8; /* Sky blue for modern tech feel */
+      --accent-hover: #0ea5e9;
+      --card-bg: #1e293b;
+      --border: #334155;
+      --nav-bg: rgba(15, 23, 42, 0.85);
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
-    a{color:var(--navy);text-decoration:none}
-    a:hover{opacity:.9}
-    .container{width:min(1100px, 92%);margin-inline:auto}
-    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--border)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{display:flex;align-items:center;gap:.7rem;font-weight:800;color:var(--navy)}
-    .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--accent)}
-    nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0;font-weight:600}
-    nav a{padding:8px 10px;border-radius:8px}
-    nav a:hover{background:var(--card)}
-    .hero{background:var(--navy);color:#fff;padding:72px 0 56px}
-    .hero .title{font-size:clamp(28px,4vw,42px);line-height:1.15;margin:0 0 10px}
-    .hero .subtitle{color:#cbd5e1;margin:0 0 18px}
-    .hero .meta{display:flex;flex-wrap:wrap;gap:.8rem;color:#e5e7eb}
-    .hero .meta a{color:#e5e7eb}
-    .cta{display:flex;gap:12px;margin-top:22px}
-    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:10px 14px;border-radius:10px;font-weight:600;border:2px solid transparent}
-    .btn.primary{background:var(--accent);color:#0b2a2a}
-    .btn.ghost{border-color:#94a3b8;color:#fff}
-    section{padding:56px 0}
-    h2.section-title{font-size:clamp(22px,3vw,28px);margin:0 0 18px;color:var(--navy)}
-    p.section-lead{margin-top:0;color:var(--muted)}
-    .about{display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
-    .about .card{background:var(--card);padding:18px;border:1px solid var(--border);border-radius:14px}
-    @media (max-width: 860px){.about{grid-template-columns:1fr}}
-    .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-    .skill-row{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px}
-    .skill-row b{color:var(--navy)}
-    @media (max-width:700px){.skills{grid-template-columns:1fr}}
-    .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-    .badge{padding:6px 10px;border:1px solid var(--border);background:#fff;border-radius:999px;font-size:13px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width:620px){.grid{grid-template-columns:1fr}}
-    .card{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
-    .card .body{padding:16px}
-    .card h3{margin:0 0 6px;font-size:18px}
-    .card p{margin:0 0 10px;color:var(--muted)}
-    .card .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
-    .tag{background:var(--card);border:1px dashed var(--border);border-radius:999px;padding:4px 10px;font-size:12px}
-    .timeline{border-left:2px solid var(--border);padding-left:16px}
-    .tl-item{margin:0 0 16px}
-    .tl-item h4{margin:0;color:var(--navy)}
-    .tl-item .small{color:var(--muted);font-size:14px}
-    footer{padding:28px 0;border-top:1px solid var(--border);color:var(--muted)}
-    .contact-links{display:flex;flex-wrap:wrap;gap:10px}
-    .contact-links a{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--border);border-radius:10px}
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text-main);
+      font-family: 'Inter', system-ui, sans-serif;
+      line-height: 1.7;
+    }
+    a { color: var(--accent); text-decoration: none; transition: 0.3s; }
+    a:hover { color: var(--accent-hover); }
+    
+    /* Layout */
+    .container { width: min(1100px, 92%); margin-inline: auto; }
+    section { padding: 80px 0; }
+    
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--nav-bg);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
+    .brand { font-size: 1.2rem; font-weight: 800; color: #fff; letter-spacing: -0.5px; display: flex; align-items: center; gap: 10px; }
+    .brand i { color: var(--accent); }
+    
+    nav ul { display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
+    nav a { color: var(--text-muted); font-weight: 500; font-size: 0.95rem; }
+    nav a:hover { color: var(--accent); }
+    @media (max-width: 768px) { nav ul { display: none; } } /* Simple mobile hide for clarity */
+
+    /* Hero */
+    .hero { padding: 100px 0 80px; }
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 56px);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      background: linear-gradient(to right, #fff, #94a3b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+    }
+    .hero .subtitle {
+      font-size: clamp(18px, 2vw, 20px);
+      color: var(--text-muted);
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+    .hero-tags { display: flex; gap: 12px; margin-bottom: 30px; flex-wrap: wrap; }
+    .hero-tag {
+      background: rgba(56, 189, 248, 0.1);
+      color: var(--accent);
+      padding: 6px 14px;
+      border-radius: 99px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .cta-group { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn {
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary { background: var(--accent); color: #0f172a; }
+    .btn-primary:hover { background: var(--accent-hover); }
+    .btn-outline { border: 1px solid var(--border); color: #fff; }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* Section Headers */
+    .section-title {
+      font-size: clamp(24px, 3vw, 32px);
+      margin: 0 0 40px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-title::after {
+      content: "";
+      display: block;
+      height: 1px;
+      background: var(--border);
+      flex: 1;
+      opacity: 0.5;
+    }
+
+    /* Skills Grid */
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
+    .skill-card {
+      background: var(--card-bg);
+      padding: 24px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      transition: transform 0.2s;
+    }
+    .skill-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+    .skill-card h3 { color: var(--accent); margin: 0 0 16px; font-size: 1.1rem; }
+    .skill-list { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skill-pill {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Projects */
+    .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .project-content { padding: 24px; flex: 1; }
+    .project-card h3 { margin: 0 0 10px; color: #fff; font-size: 1.25rem; }
+    .project-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; }
+    .tech-stack { display: flex; gap: 10px; margin-top: auto; flex-wrap: wrap; font-size: 0.85rem; color: var(--accent); font-family: monospace; }
+    
+    /* Experience */
+    .timeline { border-left: 2px solid var(--border); padding-left: 30px; margin-left: 10px; }
+    .job-item { margin-bottom: 40px; position: relative; }
+    .job-item::before {
+      content: "";
+      position: absolute;
+      left: -37px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px var(--bg);
+    }
+    .job-role { font-size: 1.25rem; font-weight: 700; color: #fff; margin: 0; }
+    .job-company { color: var(--accent); font-weight: 600; margin: 4px 0 8px; font-size: 1rem; }
+    .job-date { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px; font-family: monospace; }
+    .job-details li { margin-bottom: 10px; color: var(--text-muted); }
+
+    /* Footer */
+    footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.9rem; }
   </style>
 </head>
 <body>
+
   <header>
     <div class="container nav">
-      <div class="brand"><span class="dot"></span> Mahesh Mokashe</div>
+      <div class="brand"><i class="fa-solid fa-code"></i> Mahesh Mokashe</div>
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#experience">Experience</a></li>
-          <li><a href="#certs">Certifications</a></li>
-          <li><a href="#interests">Interests</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -83,52 +190,86 @@
 
   <section class="hero">
     <div class="container">
-      <h1 class="title">Software Developer • Python · Scrapy · Django · React.js</h1>
-      <p class="subtitle">I build scalable web scrapers, automate data pipelines, and ship clean datasets for e‑commerce & fashion domains.</p>
-      <div class="meta">
-        <span><i class="fa-solid fa-location-dot"></i> Pune, India</span>
-        <span>·</span>
-        <a href="mailto:maheshmokashe542@gmail.com"><i class="fa-solid fa-envelope"></i> maheshmokashe542@gmail.com</a>
-        <span>·</span>
-        <a href="tel:+919075575237"><i class="fa-solid fa-phone"></i> +91 9075575237</a>
-        <span>·</span>
-        <a href="https://linkedin.com/in/mahesh-mokashe1997" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+      <div class="hero-tags">
+        <span class="hero-tag">Python Expert</span>
+        <span class="hero-tag">Full Stack Developer</span>
       </div>
-      <div class="cta">
-        <a class="btn primary" href="#projects"><i class="fa-solid fa-folder-open"></i> View Projects</a>
-        <a class="btn ghost" href="./Mahesh Dec 2025.pdf" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Download Resume</a>
+      <h1>Building Scalable APIs &<br />Data-Driven Applications.</h1>
+      <p class="subtitle">
+        Software Engineer with 3.5+ years of experience engineering high-performance backends with <b>Django & FastAPI</b>, building modern UIs with <b>React.js</b>, and architecting robust data pipelines.
+      </p>
+      <div class="cta-group">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fa-solid fa-laptop-code"></i> View Work
+        </a>
+        <a href="./Mahesh Dec 2025.pdf" target="_blank" class="btn btn-outline">
+          <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+        </a>
+        <a href="https://linkedin.com/in/mahesh-mokashe1997" target="_blank" class="btn btn-outline" style="border-color: #0077b5; color: #fff;">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
       </div>
     </div>
   </section>
 
   <section id="about">
-    <div class="container about">
-      <div class="card">
-        <h2 class="section-title">About</h2>
-        <p class="section-lead">Software Developer with <b>3+ years</b> of experience specializing in Python, Scrapy, and Django. Proficient with Linux server handling (Putty), and web technologies including React.js. Strong problem‑solving skills and a collaborative, team‑oriented mindset.</p>
-      </div>
-      <div class="card">
-        <h2 class="section-title">Quick Facts</h2>
-        <ul>
-          <li>Built and maintained <b>500+ custom crawlers</b> for e‑commerce & fashion platforms.</li>
-          <li>Improved extraction efficiency by <b>30%</b> via pipeline optimizations.</li>
-          <li>Automated validation & cleansing to reduce manual errors by <b>40%</b>.</li>
-          <li>Django backends + React.js UIs for internal data tools.</li>
-        </ul>
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div style="background: var(--card-bg); padding: 30px; border-radius: 12px; border: 1px solid var(--border);">
+        <p style="margin-top: 0; color: var(--text-muted);">
+          I am a <b>Software Developer</b> based in Pune, specializing in the end-to-end development of complex web applications. While my roots are in building massive-scale data extraction systems (handling <b>500+ crawlers</b>), I have evolved into a Full Stack role.
+        </p>
+        <p style="color: var(--text-muted);">
+          Currently, I focus on building robust REST APIs using <b>FastAPI</b> and <b>Django</b>, optimizing database queries for high throughput, and creating intuitive frontend dashboards using <b>React.js</b>. I bridge the gap between raw data collection and actionable user interfaces.
+        </p>
       </div>
     </div>
   </section>
 
   <section id="skills">
     <div class="container">
-      <h2 class="section-title">Core Skills</h2>
-      <div class="skills">
-        <div class="skill-row"><b>Programming:</b> Python, Django, Pandas, NumPy</div>
-        <div class="skill-row"><b>Web Scraping:</b> Scrapy, XPath, CSS Selectors, Regex, JSON</div>
-        <div class="skill-row"><b>Web Technologies:</b> HTML, CSS, React.js, JavaScript (basic)</div>
-        <div class="skill-row"><b>Databases:</b> MySQL</div>
-        <div class="skill-row"><b>Tools & Platforms:</b> Linux, Putty, Jira, PyCharm, SVN, WinSCP</div>
-        <div class="skill-row"><b>Professional Skills:</b> Team Leadership, Collaboration, Problem‑Solving, Automation, Data Mapping</div>
+      <h2 class="section-title">Technical Expertise</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3><i class="fa-solid fa-server"></i> Backend & APIs</h3>
+          <div class="skill-list">
+            <span class="skill-pill">Python 3.x</span>
+            <span class="skill-pill">Django & DRF</span>
+            <span class="skill-pill">FastAPI</span>
+            <span class="skill-pill">REST Architecture</span>
+            <span class="skill-pill">Microservices</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3><i class="fa-brands fa-react"></i> Frontend & UI</h3>
+          <div class="skill-list">
+            <span class="skill-pill">React.js</span>
+            <span class="skill-pill">JavaScript (ES6+)</span>
+            <span class="skill-pill">HTML5 / CSS3</span>
+            <span class="skill-pill">Bootstrap</span>
+            <span class="skill-pill">JSON Parsing</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3><i class="fa-solid fa-spider"></i> Data Engineering</h3>
+          <div class="skill-list">
+            <span class="skill-pill">Scrapy Framework</span>
+            <span class="skill-pill">Pandas / NumPy</span>
+            <span class="skill-pill">MySQL</span>
+            <span class="skill-pill">XPath / Regex</span>
+            <span class="skill-pill">Data Pipelines</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3><i class="fa-solid fa-terminal"></i> DevOps & Tools</h3>
+          <div class="skill-list">
+            <span class="skill-pill">Linux / Putty</span>
+            <span class="skill-pill">Git / Bitbucket</span>
+            <span class="skill-pill">Jira</span>
+            <span class="skill-pill">CI/CD Pipelines</span>
+            <span class="skill-pill">AWS (S3 Basics)</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -136,67 +277,85 @@
   <section id="projects">
     <div class="container">
       <h2 class="section-title">Featured Projects</h2>
-      <div class="grid">
-        <article class="card"><div class="body"><h3>E‑commerce Price Tracker</h3><p>Scrapy spider suite tracking prices/stock across multiple retailers; exports normalized JSON/CSV feeds.</p></div></article>
-        <article class="card"><div class="body"><h3>Product Catalog API</h3><p>Django REST API that aggregates crawler outputs and serves queryable product data to internal dashboards.</p></div></article>
-        <article class="card"><div class="body"><h3>Scraper Ops Dashboard</h3><p>React.js UI to monitor crawler status, schedules, and logs; integrates with Linux servers via APIs.</p></div></article>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-content">
+            <h3><i class="fa-solid fa-bolt"></i> High-Performance Data API</h3>
+            <p>Designed a low-latency REST API using <b>FastAPI</b> to serve aggregated product data to internal dashboards. Implemented asynchronous database queries for real-time performance.</p>
+            <div class="tech-stack">
+              <span>#FastAPI</span> <span>#Python</span> <span>#MySQL</span> <span>#AsyncIO</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-content">
+            <h3><i class="fa-solid fa-chart-line"></i> Ops Dashboard (SaaS)</h3>
+            <p>Built a full-stack monitoring tool. The backend (<b>Django</b>) manages 500+ crawler schedules, while the frontend (<b>React.js</b>) provides live status visualization for the operations team.</p>
+            <div class="tech-stack">
+              <span>#React.js</span> <span>#Django</span> <span>#REST_API</span> <span>#Redux</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-content">
+            <h3><i class="fa-solid fa-robot"></i> E-commerce Pipeline Engine</h3>
+            <p>Architected a scalable scraping engine capable of processing terabytes of fashion data. Integrated automated data cleansing with <b>Pandas</b> to reduce manual validation errors by 40%.</p>
+            <div class="tech-stack">
+              <span>#Scrapy</span> <span>#Pandas</span> <span>#Automation</span> <span>#Linux</span>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
   <section id="experience">
     <div class="container">
-      <h2 class="section-title">Experience</h2>
+      <h2 class="section-title">Professional Experience</h2>
       <div class="timeline">
-        <div class="tl-item">
-          <h4>Software Developer · KrawlNet Technologies Pvt Ltd</h4>
-          <div class="small">Pune · Jul 2022 – Present</div>
-          <ul>
-            <li>Developed and deployed <b>500+ custom crawlers</b> for e‑commerce & fashion platforms.</li>
-            <li>Automated feed validation & data cleansing (−40% manual errors) and boosted extraction efficiency (~30%).</li>
-            <li>Built Django backends and React.js interfaces for internal data tools.</li>
-            <li>Managed deployments and monitoring on Linux servers using Putty and logging pipelines.</li>
-            <li>Processed data in XML and JSON formats; implemented robust retry/error‑handling.</li>
+        <div class="job-item">
+          <h3 class="job-role">Software Developer</h3>
+          <div class="job-company">KrawlNet Technologies Pvt Ltd · Pune, MH</div>
+          <div class="job-date">July 2022 – Present</div>
+          <ul class="job-details">
+            <li><b>Backend Development:</b> Built and maintained backend services using <b>Django</b> and <b>FastAPI</b>, ensuring secure and efficient data delivery to client applications.</li>
+            <li><b>Frontend Integration:</b> Developed internal tools and user interfaces using <b>React.js</b>, allowing non-technical teams to monitor system health and data accuracy.</li>
+            <li><b>Scalable Data Mining:</b> Deployed <b>500+ custom Scrapy crawlers</b>, improving extraction efficiency by 30% through advanced pipeline optimizations.</li>
+            <li><b>Automation:</b> Automated feed validation and cleansing processes using Python scripts, reducing manual error rates by nearly 40%.</li>
+            <li><b>Infrastructure:</b> Managed deployment and monitoring on Linux servers (using Putty/WinSCP) and utilized Jira for agile project tracking.</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="certs">
-    <div class="container">
-      <h2 class="section-title">Certifications</h2>
-      <ul>
-        <li>Python for Everybody – Coursera</li>
-        <li>Django for Web Development – Udemy</li>
-        <li>React.js Fundamentals – Codecademy</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="interests">
-    <div class="container">
-      <h2 class="section-title">Interests</h2>
-      <p>Learning New Technologies | Automation | Open Source | Tech Communities</p>
-    </div>
-  </section>
-
   <section id="contact">
-    <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <p class="section-lead">I’m open to freelance, full‑time roles, and interesting collaborations. The fastest way to reach me is email.</p>
-      <div class="contact-links">
-        <a href="mailto:maheshmokashe542@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
-        <a href="https://linkedin.com/in/mahesh-mokashe1997" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-        <a href="tel:+919075575237"><i class="fa-solid fa-phone"></i> Call</a>
+    <div class="container" style="text-align: center;">
+      <h2 class="section-title" style="justify-content: center;">Get In Touch</h2>
+      <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 30px;">
+        I am currently open to full-time opportunities where I can leverage my Full Stack Python skills.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+        <a href="mailto:maheshmokashe542@gmail.com" class="btn btn-primary">
+          <i class="fa-solid fa-envelope"></i> maheshmokashe542@gmail.com
+        </a>
+        <a href="tel:+919075575237" class="btn btn-outline">
+          <i class="fa-solid fa-phone"></i> +91 9075575237
+        </a>
       </div>
     </div>
   </section>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Mahesh Mokashe. Built with Python & React in mind.</p>
+    </div>
+  </footer>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click', e=>{const id=a.getAttribute('href');const el=document.querySelector(id);if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }})})
   </script>
 </body>
 </html>
-
-
