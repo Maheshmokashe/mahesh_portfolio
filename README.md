@@ -1,7 +1,7 @@
-# Mahesh Mokashe · Portfolio
+# Mahesh Mokashe · Software Engineer Portfolio
 
 Welcome to my personal portfolio repository!  
-This site showcases my **skills, projects, technologies, achievements, and certifications**.
+This site showcases my work as a **Python Software Engineer**, focusing on **Backend Development (Django/FastAPI)**, **Full Stack interfaces (React.js)**, and **Scalable Data Mining**.
 
 🌐 **Live Site**: [maheshmokashe.github.io/mahesh_portfolio](https://maheshmokashe.github.io/mahesh_portfolio/)  
 
@@ -14,17 +14,30 @@ This site showcases my **skills, projects, technologies, achievements, and certi
 ---
 
 ## 🚀 Tech Stack
-- **Frontend**: HTML, CSS  
-- **Programming**: Python, Django, Pandas, NumPy  
-- **Web Scraping**: Scrapy, XPath, CSS Selectors, Regex, JSON  
-- **Databases**: MySQL  
-- **Tools & Platforms**: Linux, Putty, Jira, PyCharm, SVN, WinSCP  
-- **Web Technologies**: React.js, JavaScript (basic)  
+
+### **Backend & APIs**
+- **Languages**: Python (3.x)
+- **Frameworks**: Django, FastAPI, Django REST Framework (DRF)
+- **Database**: MySQL
+
+### **Frontend & UI**
+- **Library**: React.js
+- **Core**: HTML5, CSS3, JavaScript
+- **Styling**: Bootstrap, Responsive Design
+
+### **Data Engineering & Scraping**
+- **Tools**: Scrapy, Pandas, NumPy
+- **Extraction**: XPath, CSS Selectors, Regex, JSON Parsing
+
+### **DevOps & Tools**
+- **Versioning**: Git, SVN, Bitbucket
+- **Infrastructure**: Linux, Putty, WinSCP
+- **Management**: Jira, PyCharm
 
 ---
 
 ## 📂 How to Run Locally
-1. Clone the repo:
+
+1. **Clone the repo:**
    ```bash
-   git clone https://github.com/Maheshmokashe/mahesh_portfolio.git
-   cd mahesh_portfolio
+   git clone [https://github.com/Maheshmokashe/mahesh_portfolio.git](https://github.com/Maheshmokashe/mahesh_portfolio.git)
